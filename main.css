@@ -5,3 +5,17 @@
 html, body{
     font-family: 'Roboto', sans-serif;
 }
+#albumContainer {
+    display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .albumCard {
+    background-color: white;
+    width: 31%;
+    margin: 1%;
+    box-shadow: 10px 10px;
+    outline: 1px solid lightblue;
+}
+
