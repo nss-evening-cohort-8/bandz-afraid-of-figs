@@ -1,4 +1,10 @@
+*{
+    margin: 0;
+}
 
+html, body{
+    font-family: 'Roboto', sans-serif;
+}
 #albumContainer {
     display: flex;
       flex-direction: row;
@@ -12,3 +18,4 @@
     box-shadow: 10px 10px;
     outline: 1px solid lightblue;
 }
+
