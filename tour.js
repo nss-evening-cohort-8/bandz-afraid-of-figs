@@ -1,33 +1,32 @@
 let tourSchedule = {
-    schedule: [
-      {date: "September 12th", venue: "Bridgestone Arena", city: "Nashville, TN"},
-      {date: "September 12th", venue: "Bridgestone Arena", city: "Nashville, TN"}   
+    tourInformation: [
+        {date: "September 12th", venue: "Bridgestone Arena", location:"Nashville,TN", tickets: ' www.ticketmaster.com'},
+        
+
+
     ],
+
+
+
 };
 
-const printToDom = (stringToPrint, divId) => {
+const writeToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = stringToPrint;
-
 };
 
 const tourStringBuilder = () => {
+    
     let newString = '';
-    for(let i=0; i<tourSchedule.schedule.length; i++){
+    for(let i=0; i<tourSchedule.tourInformation.length; i++){
         newString += `<div id="tour">`
-        newString += `<h4>${tourSchedule.schedule[i].date}</h4>`
-        newString += `<h4>${tourSchedule.schedule[i].time}</h4>`
-        newString += `<h4>${tourSchedule.schedule[i].venue}</h4>`
-        newString += `<h4>${tourSchedule.schedule[i].city}</h4>`
+        newString += `<h3>${tourSchedule.tourInformation[i].date}</h3>`
+        newString += `<h3>${tourSchedule.tourInformation[i].venue}</h3>`
+        newString += `<h3>${tourSchedule.tourInformation[i].location}</h3>`
+        newString += `<a href="https://${tourSchedule.tourInformation.tickets}" target="_blank">Tickets</a>`
         newString += `</div>`
     }
-    printToDom(newString, "tour");
+    writeToDom(newString, "tour")
 };
 
 tourStringBuilder();
-
-
-
-
-
-// tourStringBuilder();
