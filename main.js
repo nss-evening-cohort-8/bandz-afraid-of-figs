@@ -1,3 +1,13 @@
+const bandMembers = [
+
+        {name:'Joey', instrument:'vocals', hometown:'Nashville, TN', image:"http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"},
+    
+        {name:'Tom', instrument:'guitar', hometown:'New York, NY', image:"http://cdn.playbuzz.com/cdn//144320c8-a8c8-43db-b6a4-d9ea26f32a24/5b6f640b-cdfd-4de5-a592-92911aa9ab65.jpg"},
+    
+        {name:'Jim', instrument:'drums', hometown:'Austin, TX', image:"https://onmilwaukee.com/images/articles/bu/bucksfoofightersdrummer/bucksfoofightersdrummer_fullsize_story1.jpg?20160202102658"}
+];
+
+let band_pictures= ["/img/img1.jpg", "/img/img2.jpg", "/img/img3.jpg"];
 let afraidOfFigs = {
 albums: [
     {
@@ -46,13 +56,14 @@ albums: [
         year: "2018"    
       },
   ]
-}
 
+}
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     if (selectedDiv) {
         selectedDiv.innerHTML = stringToPrint
     }
+
 };
 
 const albumsStringBuilder = () => {
@@ -70,5 +81,32 @@ const albumsStringBuilder = () => {
     
 };
 
-albumsStringBuilder();
+const printImg = () => {
+       
+    let img ='';
+    for(let i=0; i < band_pictures.length; i++){
 
+        img += `<div class="img_band"> <img src="${band_pictures[i]}"></div>`;
+    };
+
+    printToDom(img, "image_container")
+}
+const membersStringBuilder = () => {
+    let newString = '';
+    for(let i=0; i<bandMembers.length; i++) {
+        newString+= `<div class="memberCard">`
+        newString+= `<img class="imageMemberCard"src="${bandMembers[i].image}">`
+        newString+= `<div id="memberInfo1">`
+        newString+= `<h3>${bandMembers[i].name}</h3>`
+        newString+= `<p>${bandMembers[i].instrument}</p>`
+        newString+= `<p>${bandMembers[i].hometown}</p>`
+        newString+= `</div></div>`
+    }
+    printToDom(newString, 'memberWrapper');
+  };
+membersStringBuilder();
+// membersStringBuilder(memberInfo2);
+// membersStringBuilder(memberInfo3);
+
+printImg();
+albumsStringBuilder();
