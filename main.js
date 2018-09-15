@@ -1,71 +1,83 @@
 const bandMembers = [
 
-        {name:'Joey', instrument:'vocals', hometown:'Nashville, TN'},
+        {name:'Joey', instrument:'vocals', hometown:'Nashville, TN', image:"http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"},
     
-        {name:'Tom', instrument:'guitar', hometown:'New York, NY'},
+        {name:'Tom', instrument:'guitar', hometown:'New York, NY', image:"http://cdn.playbuzz.com/cdn//144320c8-a8c8-43db-b6a4-d9ea26f32a24/5b6f640b-cdfd-4de5-a592-92911aa9ab65.jpg"},
     
-        {name:'Jim', instrument:'drums', hometown:'Austin, TX'}
+        {name:'Jim', instrument:'drums', hometown:'Austin, TX', image:"https://onmilwaukee.com/images/articles/bu/bucksfoofightersdrummer/bucksfoofightersdrummer_fullsize_story1.jpg?20160202102658"}
 ];
-
-const printToDom = (stringToPrint, divId) => {
-    const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML += stringToPrint;
-};
-
-const membersStringBuilder = () => {
-    let newString = '';
-    for(let i=0; i<bandMembers.length; i++) {
-        newString+= `<div class="memberCard">`
-        newString+= `<h3>${bandMembers[i].name}</h3>`
-        newString+= `<p>${bandMembers[i].instrument}</p>`
-        newString+= `<p>${bandMembers[i].hometown}</p>`
-        newString+= `</div>`
-    }
-    printToDom(newString, 'memberInfo');
-  };
-membersStringBuilder(memberInfo1);
-membersStringBuilder(memberInfo2);
-membersStringBuilder(memberInfo3);
 
 let band_pictures= ["/img/img1.jpg", "/img/img2.jpg", "/img/img3.jpg"];
 let afraidOfFigs = {
-tour: "na",
-members: "na",
 albums: [
     {
-      imageUrl: "https://orig00.deviantart.net/a457/f/2008/223/f/9/weird_square_things_by_kurachan.png",
-      title: "Squares",
+      imageUrl: "./img/figs_A.jpg",
+      title: "Nevermind",
       year: "2001"    
     },
     {
-        imageUrl: "http://forum.curvefever.com/sites/default/files/ideas14Mar/square%20big.png",
-        title: "More Squares",
+        imageUrl: "./img/figs_B.jpg",
+        title: "Rumors",
         year: "2003"    
       },
     {
-        imageUrl: "https://allgiftsconsidered.com/wp-content/uploads/2013/08/weird-square-chair.jpg",
-        title: "Squares On Legs",
+        imageUrl: "./img/figs_C.jpg",
+        title: "Abbey Road",
         year: "2006"    
       },
     {
-        imageUrl: "https://avatars2.githubusercontent.com/u/8086224?s=88&v=4",
-        title: "Alien Square",
+        imageUrl: "./img/figs_D.jpg",
+        title: "Blonde on Blonde",
         year: "2009"    
       },
+    {
+        imageUrl: "./img/figs_E.jpg",
+        title: "Appetite For Destruction",
+        year: "2011"    
+      },
+    {
+        imageUrl: "./img/figs_F.jpg",
+        title: "Thriller",
+        year: "2014"    
+      },
+    {
+        imageUrl: "./img/figs_G.jpg",
+        title: "Dark Side of the Moon",
+        year: "2016"    
+      },
+    {
+        imageUrl: "./img/figs_H.jpg",
+        title: "Self Titled",
+        year: "2017"    
+      },
+    {
+        imageUrl: "./img/figs_I.jpg",
+        title: "Purple Rain",
+        year: "2018"    
+      },
   ]
+
+}
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    if (selectedDiv) {
+        selectedDiv.innerHTML = stringToPrint
+    }
+
 };
 
 const albumsStringBuilder = () => {
     let newString = '';
     for(let i = 0; i<afraidOfFigs.albums.length; i++) {
-        newString += `<div class ="image">`;
+        newString += `<div class="albumCard">`;
         newString += `<img src="${afraidOfFigs.albums[i].imageUrl}">`;
         newString += `<h2>${afraidOfFigs.albums[i].title}</h2>`;
         newString += `<h5>${afraidOfFigs.albums[i].year}</h5>`;
-        newString += `</div>`;    
+        newString += `</div>`; 
+       
     }
-    printToDom(newString, 'albumCardA');
-    printToDom(newString, 'albumCardB');
+    printToDom(newString, 'albumContainerMain');
+ 
     
 };
 
@@ -79,6 +91,22 @@ const printImg = () => {
 
     printToDom(img, "image_container")
 }
+const membersStringBuilder = () => {
+    let newString = '';
+    for(let i=0; i<bandMembers.length; i++) {
+        newString+= `<div class="memberCard">`
+        newString+= `<img class="imageMemberCard"src="${bandMembers[i].image}">`
+        newString+= `<div id="memberInfo1">`
+        newString+= `<h3>${bandMembers[i].name}</h3>`
+        newString+= `<p>${bandMembers[i].instrument}</p>`
+        newString+= `<p>${bandMembers[i].hometown}</p>`
+        newString+= `</div></div>`
+    }
+    printToDom(newString, 'memberWrapper');
+  };
+membersStringBuilder();
+// membersStringBuilder(memberInfo2);
+// membersStringBuilder(memberInfo3);
 
 printImg();
 albumsStringBuilder();
