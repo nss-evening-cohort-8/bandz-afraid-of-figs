@@ -1,57 +1,31 @@
-const bandMembers = {
-    joey: [
-        {name:'Joey', instrument:'vocals', hometown:'Nashville, TN'}
-    ],
-    tom: [
-        {name:'Tom', instrument:'guitar', hometown:'New York, NY'}
-    ],
-    jim: [
+const bandMembers = [
+
+        {name:'Joey', instrument:'vocals', hometown:'Nashville, TN'},
+    
+        {name:'Tom', instrument:'guitar', hometown:'New York, NY'},
+    
         {name:'Jim', instrument:'drums', hometown:'Austin, TX'}
-    ]
-};
+];
 
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML += stringToPrint;
 };
 
-const membersStringBuilder1 = () => {
+const membersStringBuilder = () => {
     let newString = '';
-    for(let i=0; i<bandMembers.joey.length; i++) {
+    for(let i=0; i<bandMembers.length; i++) {
         newString+= `<div class="memberCard">`
-        newString+= `<h3>${bandMembers.joey[i].name}</h3>`
-        newString+= `<p>${bandMembers.joey[i].instrument}</p>`
-        newString+= `<p>${bandMembers.joey[i].hometown}</p>`
+        newString+= `<h3>${bandMembers[i].name}</h3>`
+        newString+= `<p>${bandMembers[i].instrument}</p>`
+        newString+= `<p>${bandMembers[i].hometown}</p>`
         newString+= `</div>`
     }
-    printToDom(newString, 'memberInfo1');
+    printToDom(newString, 'memberInfo');
   };
-const membersStringBuilder2 = () => {
-    let newString = '';
-    for(let i=0; i<bandMembers.tom.length; i++) {
-        newString+= `<div class="memberCard">`
-        newString+= `<h3>${bandMembers.tom[i].name}</h3>`
-        newString+= `<p>${bandMembers.tom[i].instrument}</p>`
-        newString+= `<span>${bandMembers.tom[i].hometown}</span>`
-        newString+= `</div>`
-    }
-    printToDom(newString, 'memberInfo2');
-  };
-const membersStringBuilder3 = () => {
-    let newString = '';
-    for(let i=0; i<bandMembers.jim.length; i++) {
-        newString+= `<div class="memberCard">`
-        newString+= `<h3>${bandMembers.jim[i].name}</h3>`
-        newString+= `<p>${bandMembers.jim[i].instrument}</p>`
-        newString+= `<p>${bandMembers.jim[i].hometown}</p>`
-        newString+= `</div>`
-    }
-    printToDom(newString, 'memberInfo3');
-  };
-
-membersStringBuilder1();
-membersStringBuilder2();
-membersStringBuilder3();
+membersStringBuilder(memberInfo1);
+membersStringBuilder(memberInfo2);
+membersStringBuilder(memberInfo3);
 
 let band_pictures= ["/img/img1.jpg", "/img/img2.jpg", "/img/img3.jpg"];
 let afraidOfFigs = {
