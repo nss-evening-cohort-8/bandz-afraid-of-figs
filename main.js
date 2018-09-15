@@ -3,10 +3,10 @@ const bandMembers = {
         {name:'Joey', instrument:'vocals', hometown:'Nashville, TN'}
     ],
     tom: [
-        {name:'Tom', instrument:'guitar', hometown:'Kansas City, MO'}
+        {name:'Tom', instrument:'guitar', hometown:'New York, NY'}
     ],
     jim: [
-        {name:'Jim', instrument:'drums', hometown:'Sacramento, CA'}
+        {name:'Jim', instrument:'drums', hometown:'Austin, TX'}
     ]
 };
 
@@ -32,7 +32,7 @@ const membersStringBuilder2 = () => {
         newString+= `<div class="memberCard">`
         newString+= `<h3>${bandMembers.tom[i].name}</h3>`
         newString+= `<p>${bandMembers.tom[i].instrument}</p>`
-        newString+= `<p>${bandMembers.tom[i].hometown}</p>`
+        newString+= `<span>${bandMembers.tom[i].hometown}</span>`
         newString+= `</div>`
     }
     printToDom(newString, 'memberInfo2');

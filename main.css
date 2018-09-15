@@ -44,9 +44,10 @@ header{
 }
 /* --------- END OF HEADER ------------- */
 
-h1 {
+#memberTitle {
     text-align: center;
     color: #f1f2f6;
+    padding: 30px;
 }
 
 #memberWrapper {
@@ -54,16 +55,22 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 30px 60px 30px;
 }
 
 .memberCard {
-    max-width: 30%;
     background-color: #f1f2f6;
-    box-shadow: 10px #6f1e51;
 }
 .imageMemberCard {
-    max-width: 50%;
+    height: 280px;
+    width: 320px;
 }
+#memberInfo1,
+#memberInfo2,
+#memberInfo3 {
+    padding: 20px;
+}
+
 /* -------- START OF FOOTER -------------- */
 .footer{
     height: 150px;
