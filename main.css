@@ -36,7 +36,7 @@ header{
 
 .nav_bar a{
     text-decoration: none;
-    padding: 100px 30px 3px; 30px;
+    padding: 100px 30px 3px 30px;
     color: #fff;
     font-size: 1.2em;
     border-bottom: 3px solid  #FFC312;
@@ -225,6 +225,21 @@ width:100%;
     margin: 10px;
 }
 
+.tourHeading {
+    text-align: center;
+}
+
+#tour {
+    border: 1px solid black;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+ 
+
+   
+ 
+}  
 /* .image__productCard {
     height: 250px;
     width: 250px;
@@ -232,4 +247,3 @@ width:100%;
     margin: 10px;
     image-orientation: center;
 } */
-
