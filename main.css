@@ -47,6 +47,29 @@ header {
     font-size: 1.2em;
     color: #000;
 }
+
+
+
+#image_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    padding-bottom: 50px;
+}
+
+
+.img_band{
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 10px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+
+
 /* --------- END OF HEADER ------------- */
 /* Begin Band Member Page */
 #memberTitle {
