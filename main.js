@@ -95,8 +95,6 @@ const albumsStringBuilder = () => {
     
 };
 
-
-
 const printImg = () => {
        
     let img ='';
