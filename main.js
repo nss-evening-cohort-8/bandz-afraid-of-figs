@@ -15,7 +15,7 @@ const printToDom = (stringToPrint, divId) => {
     selectedDiv.innerHTML += stringToPrint;
 };
 
-const membersStringBuilder = () => {
+const membersStringBuilder1 = () => {
     let newString = '';
     for(let i=0; i<bandMembers.joey.length; i++) {
         newString+= `<div class="memberCard">`
@@ -26,5 +26,29 @@ const membersStringBuilder = () => {
     }
     printToDom(newString, 'memberInfo1');
   };
+const membersStringBuilder2 = () => {
+    let newString = '';
+    for(let i=0; i<bandMembers.tom.length; i++) {
+        newString+= `<div class="memberCard">`
+        newString+= `<h3>${bandMembers.tom[i].name}</h3>`
+        newString+= `<p>${bandMembers.tom[i].instrument}</p>`
+        newString+= `<p>${bandMembers.tom[i].hometown}</p>`
+        newString+= `</div>`
+    }
+    printToDom(newString, 'memberInfo2');
+  };
+const membersStringBuilder3 = () => {
+    let newString = '';
+    for(let i=0; i<bandMembers.jim.length; i++) {
+        newString+= `<div class="memberCard">`
+        newString+= `<h3>${bandMembers.jim[i].name}</h3>`
+        newString+= `<p>${bandMembers.jim[i].instrument}</p>`
+        newString+= `<p>${bandMembers.jim[i].hometown}</p>`
+        newString+= `</div>`
+    }
+    printToDom(newString, 'memberInfo3');
+  };
 
-  membersStringBuilder();
+  membersStringBuilder1();
+  membersStringBuilder2();
+  membersStringBuilder3();
