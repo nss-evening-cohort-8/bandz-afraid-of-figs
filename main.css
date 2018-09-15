@@ -1,22 +1,228 @@
-*{
+* {
     margin: 0;
+    box-sizing: border-box;
 }
 
-html, body{
+body{
     font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    text-align: center;
 }
-#albumContainer {
+
+
+/* ----------- START OF HEADER ------------- */
+
+header{
+    width: 100%;
+    height: 130px;
+    background-color: rgba(111, 30, 81, 0.8);
     display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top:0;
+}
+
+.logo {
+    min-width: 200px;
+    min-height: 50%;
+    margin-left: 30px;
+}
+
+.nav_bar{
+    list-style: none;
+    display: flex;
+    margin-top: 100px;
+}
+
+.nav_bar a{
+    text-decoration: none;
+    padding: 100px 30px 3px 30px;
+    color: #fff;
+    font-size: 1.2em;
+    border-bottom: 3px solid  #FFC312;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.nav_bar a:hover{
+    text-decoration: none;
+    background-color: #FFC312;
+    color: #fff;
+    font-size: 1.2em;
+    color: #000;
+}
+
+
+/* --------- END OF HEADER ------------- */
+
+
+
+.slide img{
+    max-width: 100%;
+    position: absolute; 
+    top:0;
+    z-index: -1000;
+}
+
+
+/* -------- START OF Image Container ---------- */
+
+#image_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    padding-bottom: 50px;
+}
+
+
+.img_band{
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: 10px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+/* -------- END OF Image Container ---------- */
+
+
+
+/* -------- START OF FOOTER -------------- */
+
+.footer{
+    height: 150px;
+    background-color: #FFC312;
+    width:100%;
+    position: relative;
+    bottom:0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.footer img{
+    padding: 20px;
+}
+
+.footer h5{
+width:100%;
+}
+
+/* -------- END OF FOOTER -------------- */
+
+
+
+
+/* ----------- START OF HEADER ------------- */
+header{
+    width: 100%;
+    height: 130px;
+    background-color: rgba(111, 30, 81, 0.8);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top:0;
+}
+.logo {
+    max-width: 100%;
+    height: 100%;
+    margin-left: 30px;
+}
+.nav_bar{
+    list-style: none;
+    display: flex;
+    margin-top: 100px;
+}
+.nav_bar a {
+    text-decoration: none;
+    padding: 100px 30px 3px 30px;
+    color: #fff;
+    font-size: 1.2em;
+    border-bottom: 3px solid  #FFC312;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.nav_bar a:hover{
+    text-decoration: none;
+    background-color: #FFC312;
+    color: #fff;
+    font-size: 1.2em;
+    color: #000;
+}
+/* --------- END OF HEADER ------------- */
+.slide img{
+    max-width: 100%;
+    position: relative; 
+    top:0;
+    z-index: -1000;
+}
+
+/* -------- START OF FOOTER -------------- */
+.footer{
+    height: 150px;
+    background-color: #FFC312;
+    width:100%;
+    position: relative;
+    bottom:0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+.footer img{
+    padding: 20px;
+}
+.footer h5{
+width:100%;
+}
+/* -------- END OF FOOTER -------------- */ 
+
+
+
+/* -------- ALBUM PAGE INFO ------------ */
+
+#albumContainer {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
   }
 
-  .albumCard {
-    background-color: white;
+  #albumCardA {
+    background-color: #2F3542;
     width: 31%;
-    margin: 1%;
-    box-shadow: 10px 10px;
-    outline: 1px solid lightblue;
+    outline: 2px solid grey;
+    color: #FFC312;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px;
+}
+
+#albumCardB {
+    background-color: #2F3542;
+    width: 31%;
+    outline: 2px solid grey;
+    color: #FFC312;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 20px;
+}
+
+.image img {
+    height: 250px;
+    width: 250px;
+    padding: 15px;
+    margin: 10px;
 }
 
 .tourHeading {
@@ -34,3 +240,10 @@ html, body{
    
  
 }  
+/* .image__productCard {
+    height: 250px;
+    width: 250px;
+    padding: 15px;
+    margin: 10px;
+    image-orientation: center;
+} */
