@@ -23,8 +23,8 @@ header{
 }
 
 .logo {
-    max-width: 100%;
-    height: 100%;
+    min-width: 100px;
+    min-height: 50%;
     margin-left: 30px;
 }
 
@@ -67,7 +67,7 @@ header{
 
 /* -------- START OF Image Container ---------- */
 
-.image_container {
+#image_container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -75,9 +75,8 @@ header{
     padding-bottom: 50px;
 }
 
-.img1,
-.img2,
-.img3{
+
+.img_band{
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
@@ -116,3 +115,18 @@ width:100%;
 }
 
 /* -------- END OF FOOTER -------------- */
+}
+#albumContainer {
+    display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .albumCard {
+    background-color: white;
+    width: 31%;
+    margin: 1%;
+    box-shadow: 10px 10px;
+    outline: 1px solid lightblue;
+}
+
