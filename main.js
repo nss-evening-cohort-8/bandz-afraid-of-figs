@@ -1,47 +1,47 @@
 let afraidOfFigs = {
 albums: [
     {
-      imageUrl: "https://i.imgur.com/OFbP0lp.jpg",
+      imageUrl: "./img/figs_A.jpg",
       title: "Nevermind",
       year: "2001"    
     },
     {
-        imageUrl: "https://i.imgur.com/g93zMrX.jpg",
+        imageUrl: "./img/figs_B.jpg",
         title: "Rumors",
         year: "2003"    
       },
     {
-        imageUrl: "https://i.imgur.com/d1QNeDz.jpg",
+        imageUrl: "./img/figs_C.jpg",
         title: "Abbey Road",
         year: "2006"    
       },
     {
-        imageUrl: "https://i.imgur.com/ZdffId8.jpg",
+        imageUrl: "./img/figs_D.jpg",
         title: "Blonde on Blonde",
         year: "2009"    
       },
     {
-        imageUrl: "https://i.imgur.com/TmPeycg.jpg",
+        imageUrl: "./img/figs_E.jpg",
         title: "Appetite For Destruction",
-        year: "20011"    
+        year: "2011"    
       },
     {
-        imageUrl: "https://i.imgur.com/HAKabfZ.jpg",
+        imageUrl: "./img/figs_F.jpg",
         title: "Thriller",
         year: "2014"    
       },
     {
-        imageUrl: "https://i.imgur.com/5vaSoY0.jpg",
+        imageUrl: "./img/figs_G.jpg",
         title: "Dark Side of the Moon",
         year: "2016"    
       },
     {
-        imageUrl: "https://i.imgur.com/cSoldzo.jpg",
+        imageUrl: "./img/figs_H.jpg",
         title: "Self Titled",
         year: "2017"    
       },
     {
-        imageUrl: "https://i.imgur.com/McmbdoW.jpg",
+        imageUrl: "./img/figs_I.jpg",
         title: "Purple Rain",
         year: "2018"    
       },
