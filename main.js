@@ -50,9 +50,9 @@ albums: [
 
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML = stringToPrint
-    
-
+    if (selectedDiv) {
+        selectedDiv.innerHTML = stringToPrint
+    }
 };
 
 const albumsStringBuilder = () => {
