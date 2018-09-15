@@ -1,3 +1,4 @@
+let band_pictures= ["/img/img1.jpg", "/img/img2.jpg", "/img/img3.jpg"];
 let afraidOfFigs = {
 tour: "na",
 members: "na",
@@ -45,5 +46,18 @@ const albumsStringBuilder = () => {
     
 };
 
-albumsStringBuilder();
 
+
+const printImg = () => {
+       
+    let img ='';
+    for(let i=0; i < band_pictures.length; i++){
+
+        img += `<div class="img_band"> <img src="${band_pictures[i]}"></div>`;
+    };
+
+    printToDom(img, "image_container")
+}
+
+printImg();
+albumsStringBuilder();
