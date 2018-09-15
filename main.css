@@ -19,3 +19,18 @@ html, body{
     outline: 1px solid lightblue;
 }
 
+.tourHeading {
+    text-align: center;
+}
+
+#tour {
+    border: 1px solid black;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+ 
+
+   
+ 
+}  
