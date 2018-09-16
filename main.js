@@ -1,29 +1,65 @@
+const bandMembers = [
+
+    {name:'Joey', instrument:'vocals', hometown:'Nashville, TN', image:"http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"},
+
+    {name:'Tom', instrument:'guitar', hometown:'New York, NY', image:"http://cdn.playbuzz.com/cdn//144320c8-a8c8-43db-b6a4-d9ea26f32a24/5b6f640b-cdfd-4de5-a592-92911aa9ab65.jpg"},
+
+    {name:'Jim', instrument:'drums', hometown:'Austin, TX', image:"https://onmilwaukee.com/images/articles/bu/bucksfoofightersdrummer/bucksfoofightersdrummer_fullsize_story1.jpg?20160202102658"}
+];
+
 let band_pictures= ["/img/img1.jpg", "/img/img2.jpg", "/img/img3.jpg"];
 let afraidOfFigs = {
-members: "na",
 albums: [
-    {
-      imageUrl: "https://orig00.deviantart.net/a457/f/2008/223/f/9/weird_square_things_by_kurachan.png",
-      title: "Squares",
-      year: "2001"    
-    },
-    {
-        imageUrl: "http://forum.curvefever.com/sites/default/files/ideas14Mar/square%20big.png",
-        title: "More Squares",
-        year: "2003"    
-      },
-    {
-        imageUrl: "https://allgiftsconsidered.com/wp-content/uploads/2013/08/weird-square-chair.jpg",
-        title: "Squares On Legs",
-        year: "2006"    
-      },
-    {
-        imageUrl: "https://avatars2.githubusercontent.com/u/8086224?s=88&v=4",
-        title: "Alien Square",
-        year: "2009"    
-      },
-    ],
-tourInformation: [
+{
+  imageUrl: "./img/figs_A.jpg",
+  title: "Nevermind",
+  year: "2001"    
+},
+{
+    imageUrl: "./img/figs_B.jpg",
+    title: "Rumors",
+    year: "2003"    
+  },
+{
+    imageUrl: "./img/figs_C.jpg",
+    title: "Abbey Road",
+    year: "2006"    
+  },
+{
+    imageUrl: "./img/figs_D.jpg",
+    title: "Blonde on Blonde",
+    year: "2009"    
+  },
+{
+    imageUrl: "./img/figs_E.jpg",
+    title: "Appetite For Destruction",
+    year: "2011"    
+  },
+{
+    imageUrl: "./img/figs_F.jpg",
+    title: "Thriller",
+    year: "2014"    
+  },
+{
+    imageUrl: "./img/figs_G.jpg",
+    title: "Dark Side of the Moon",
+    year: "2016"    
+  },
+{
+    imageUrl: "./img/figs_H.jpg",
+    title: "Self Titled",
+    year: "2017"    
+  },
+{
+    imageUrl: "./img/figs_I.jpg",
+    title: "Purple Rain",
+    year: "2018"    
+  },
+]
+
+};
+let tourSchedule = {
+    tourInformation: [
         {date: "September 12th", venue: "Bridgestone Arena", locations:"Nashville,TN", tickets: 'www.ticketmaster.com'},
         {date: "September 13th", venue: "House of Blues", locations:"Chicago, IL", tickets: 'www.ticketmaster.com'},
         {date: "September 14th", venue: "Wells Fargo Center", locations:"Philadelphia, PA", tickets: 'www.ticketmaster.com'},
@@ -36,56 +72,85 @@ tourInformation: [
         {date: "September 21st", venue: "The Forum", locations:"Inglewood, CA", tickets: 'www.ticketmaster.com'},
         {date: "September 22nd", venue: "Gila River Arena", locations:"Glendale, AZ", tickets: 'www.ticketmaster.com'},
         
+
     ],
+
+
+
 };
-
-
 const printToDom = (stringToPrint, divId) => {
-    const selectedDiv = document.getElementById(divId);
-    if(selectedDiv){
+const selectedDiv = document.getElementById(divId);
+if (selectedDiv) {
     selectedDiv.innerHTML = stringToPrint
-    }
+}
+
 };
 
 const albumsStringBuilder = () => {
-    let newString = '';
-    for(let i = 0; i<afraidOfFigs.albums.length; i++) {
-        newString += `<div class ="image">`;
-        newString += `<img src="${afraidOfFigs.albums[i].imageUrl}">`;
-        newString += `<h2>${afraidOfFigs.albums[i].title}</h2>`;
-        newString += `<h5>${afraidOfFigs.albums[i].year}</h5>`;
-        newString += `</div>`;    
-    }
-    printToDom(newString, 'albumContainerMain');
-};
+let newString = '';
+for(let i = 0; i<afraidOfFigs.albums.length; i++) {
+    newString += `<div class="albumCard">`;
+    newString += `<img src="${afraidOfFigs.albums[i].imageUrl}">`;
+    newString += `<h2>${afraidOfFigs.albums[i].title}</h2>`;
+    newString += `<h5>${afraidOfFigs.albums[i].year}</h5>`;
+    newString += `</div>`; 
+   
+}
+printToDom(newString, 'albumContainerMain');
 
+
+};
 
 const printImg = () => {
-       
-    let img ='';
-    for(let i=0; i < band_pictures.length; i++){
+   
+let img ='';
+for(let i=0; i < band_pictures.length; i++){
 
-        img += `<div class="img_band"> <img src="${band_pictures[i]}"></div>`;
-    }
-
-    printToDom(img, "image_container")
+    img += `<div class="img_band"> <img src="${band_pictures[i]}"></div>`;
 };
 
+printToDom(img, "image_container")
+}
+const membersStringBuilder = () => {
+let newString = '';
+for(let i=0; i<bandMembers.length; i++) {
+    newString+= `<div class="memberCard">`
+    newString+= `<img class="imageMemberCard"src="${bandMembers[i].image}">`
+    newString+= `<div id="memberInfo1">`
+    newString+= `<h3>${bandMembers[i].name}</h3>`
+    newString+= `<p>${bandMembers[i].instrument}</p>`
+    newString+= `<p>${bandMembers[i].hometown}</p>`
+    newString+= `</div></div>`
+}
+printToDom(newString, 'memberWrapper');
+};
 const tourStringBuilder = () => {
     
     let newString = '';
-    for(let i=0; i<afraidOfFigs.tourInformation.length; i++){
+    for(let i=0; i<tourSchedule.tourInformation.length; i++){
         newString += `<div id="tour">`
-        newString += `<h3 class="concert">${afraidOfFigs.tourInformation[i].date}</h3>`
-        newString += `<h3 class="concert">${afraidOfFigs.tourInformation[i].venue}</h3>`
-        newString += `<h3 class="concert">${afraidOfFigs.tourInformation[i].locations}</h3>`
-        newString += `<a href="https://${afraidOfFigs.tourInformation[i].tickets}" target ="_blank">Tickets</a>`
+        newString += `<h3 class="concert">${tourSchedule.tourInformation[i].date}</h3>`
+        newString += `<h3 class="concert">${tourSchedule.tourInformation[i].venue}</h3>`
+        newString += `<h3 class="concert">${tourSchedule.tourInformation[i].locations}</h3>`
+        newString += `<a href="https://${tourSchedule.tourInformation[i].tickets}" target ="_blank">Tickets</a>`
         newString += `</div>`
     }
     printToDom(newString, "tour")
 };
+membersStringBuilder();
+// membersStringBuilder(memberInfo2);
+// membersStringBuilder(memberInfo3);
 
 printImg();
 albumsStringBuilder();
 tourStringBuilder();
+
+
+
+
+
+
+
+    
+
 

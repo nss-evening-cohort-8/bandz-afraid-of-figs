@@ -22,6 +22,10 @@ header{
     top:0;
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 .logo {
     min-width: 200px;
     min-height: 50%;
@@ -190,39 +194,37 @@ width:100%;
 
 /* -------- ALBUM PAGE INFO ------------ */
 
-#albumContainer {
-    margin-top: 25px;
-    margin-bottom: 50px;
+
+
+  #albumContainerMain {
+    margin-top: 0px;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
+    background-color: #2F3542;
+    
   }
 
-  #albumCardA {
-    background-color: #2F3542;
-    width: 31%;
+  .albumCard {
+    background-color: #6F1E51;
+    width: 30%;
     outline: 2px solid grey;
     color: #FFC312;
     font-family: 'Roboto Condensed', sans-serif;
-    padding: 10px;
+    padding: 9px;
+    margin: 9px;
+    
 }
 
-#albumCardB {
-    background-color: #2F3542;
-    width: 31%;
-    outline: 2px solid grey;
-    color: #FFC312;
-    font-family: 'Roboto Condensed', sans-serif;
+#albumTitle {
+    color:  #f1f2f6;
+    background-color:#2F3542;
     padding: 20px;
-}
-
-.image img {
-    height: 250px;
-    width: 250px;
-    padding: 15px;
-    margin: 10px;
+    margin: 0px;
+    text-align: center;
 }
 
 .tourHeading {
@@ -235,15 +237,4 @@ width:100%;
     overflow: hidden;
     white-space: nowrap;
     text-align: center;
- 
-
-   
- 
-}  
-/* .image__productCard {
-    height: 250px;
-    width: 250px;
-    padding: 15px;
-    margin: 10px;
-    image-orientation: center;
-} */
+ }  
