@@ -65,48 +65,93 @@ const printToDom = (stringToPrint, divId) => {
     }
 
 };
+let tourSchedule = {
+    tourInformation: [
+
+    {date:'September 15th', venue:'Ryman Auditorium', locations:'Nashville, TN', tickets:"www.ticketmaster.com"},
+    {date:'September 16th', venue:'Shoreline Ampitheater', locations:'Menlo Park, CA', tickets:"www.ticketmaster.com"},
+    {date:'September 17th', venue:'Bridgestone Arena', locations:'Nashville, TN', tickets:"www.ticketmaster.com"},
+    {date:'September 18th', venue:'Ascend Ampitheater', locations:'Nashville, TN', tickets:"www.ticketmaster.com"},
+    {date:'September 19th', venue:'American Airlines Center', locations:'Dallas, TX', tickets:"www.ticketmaster.com"},
+    {date:'September 20th', venue:'Toyota Center', locations:'Houston, TX', tickets:"www.ticketmaster.com"},
+    {date:'September 21st', venue:'Wells Fargo Center', locations:'Philadelphia, PA', tickets:"www.ticketmaster.com"},
+    {date:'September 23rd', venue:'America Airlines Arena', locations:'Miami, FL', tickets:"www.ticketmaster.com"},
+    {date:'September 24th', venue:'Gila River Arena', locations:'Glendale, AZ', tickets:"www.ticketmaster.com"},
+    {date:'September 25th', venue:'Vivint Smart Home Arena', locations:'Salt Lake City, UT', tickets:"www.ticketmaster.com"},
+    {date:'September 26th', venue:'The Forum', locations:'Inglewood, CA', tickets:"www.ticketmaster.com"},
+
+
+    
+     
+]
+
+    
+      
+    
+    
+
+    
+   
+};
+
+
 
 const albumsStringBuilder = () => {
-    let newString = '';
-    for(let i = 0; i<afraidOfFigs.albums.length; i++) {
-        newString += `<div class="albumCard">`;
-        newString += `<img src="${afraidOfFigs.albums[i].imageUrl}">`;
-        newString += `<h2>${afraidOfFigs.albums[i].title}</h2>`;
-        newString += `<h5>${afraidOfFigs.albums[i].year}</h5>`;
-        newString += `</div>`; 
-       
-    }
-    printToDom(newString, 'albumContainerMain');
- 
-    
+let newString = '';
+for(let i = 0; i<afraidOfFigs.albums.length; i++) {
+    newString += `<div class="albumCard">`;
+    newString += `<img src="${afraidOfFigs.albums[i].imageUrl}">`;
+    newString += `<h2>${afraidOfFigs.albums[i].title}</h2>`;
+    newString += `<h5>${afraidOfFigs.albums[i].year}</h5>`;
+    newString += `</div>`; 
+   
+}
+printToDom(newString, 'albumContainerMain');
+
+
 };
 
 const printImg = () => {
-       
-    let img ='';
-    for(let i=0; i < band_pictures.length; i++){
+   
+let img ='';
+for(let i=0; i < band_pictures.length; i++){
 
-        img += `<div class="img_band"> <img src="${band_pictures[i]}"></div>`;
-    };
+    img += `<div class="img_band"> <img src="${band_pictures[i]}"></div>`;
+};
 
-    printToDom(img, "image_container")
+printToDom(img, "image_container")
 }
 const membersStringBuilder = () => {
+let newString = '';
+for(let i=0; i<bandMembers.length; i++) {
+    newString+= `<div class="memberCard">`
+    newString+= `<img class="imageMemberCard"src="${bandMembers[i].image}">`
+    newString+= `<div id="memberInfo1">`
+    newString+= `<h3>${bandMembers[i].name}</h3>`
+    newString+= `<p>${bandMembers[i].instrument}</p>`
+    newString+= `<p>${bandMembers[i].hometown}</p>`
+    newString+= `</div></div>`
+}
+printToDom(newString, 'memberWrapper');
+};
+const tourStringBuilder = () => {
+    
     let newString = '';
-    for(let i=0; i<bandMembers.length; i++) {
-        newString+= `<div class="memberCard">`
-        newString+= `<img class="imageMemberCard"src="${bandMembers[i].image}">`
-        newString+= `<div id="memberInfo1">`
-        newString+= `<h3>${bandMembers[i].name}</h3>`
-        newString+= `<p>${bandMembers[i].instrument}</p>`
-        newString+= `<p>${bandMembers[i].hometown}</p>`
-        newString+= `</div></div>`
+    for(let i=0; i<tourSchedule.tourInformation.length; i++){
+        newString += `<div id="tour">`
+        newString += `<h2 class="concert">${tourSchedule.tourInformation[i].date}</h2>`
+        newString += `<h4 class="concert">${tourSchedule.tourInformation[i].venue}</h4>`
+        newString += `<h4 class="concert">${tourSchedule.tourInformation[i].locations}</h4>`
+        newString += `<a href="https://${tourSchedule.tourInformation[i].tickets}" target ="_blank" class="concert">Tickets</a>`
+        newString += `</div>`
     }
-    printToDom(newString, 'memberWrapper');
-  };
+    printToDom(newString, "tour")
+};
 membersStringBuilder();
 // membersStringBuilder(memberInfo2);
 // membersStringBuilder(memberInfo3);
 
 printImg();
 albumsStringBuilder();
+tourStringBuilder();
+
