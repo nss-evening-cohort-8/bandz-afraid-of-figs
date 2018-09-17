@@ -16,7 +16,7 @@ A website for the band Afraid of Figs containing home, tour, band members, and a
 
 ### Screenshot(s)
 
-<img src="https://bandz-afraid-of-figs/img/screen-shot-members-page.png">
+<img src="https://github.com/nss-evening-cohort-8/bandz-afraid-of-figs/blob/master/img/screen-shot-members-page.png">
     
 
 ### Steps to run the project
