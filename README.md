@@ -7,7 +7,8 @@
 
 # Home page layout design
 ````
-[The colors used for this projects are:](https://github.com/nss-evening-cohort-8/bandz-afraid-of-figs/blob/master/img/colors.jpg)
+The colors used for this projects are:
+[Colors:] (<img src="https://github.com/nss-evening-cohort-8/bandz-afraid-of-figs/blob/master/img/colors.jpg">)
 ````
 
 ### Description
