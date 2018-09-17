@@ -142,12 +142,28 @@ max-width: 100%;
 }
 
 #tour {
-    border: 1px solid black;
+    border: 5px ridge black;
     width: 100%;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: wrap;
     text-align: center;
-}  
+
+    
+} 
+
+#tourBody {
+    background-color: #2F3542;
+    color:  #f1f2f6;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.concert {
+    display:flex;
+    justify-content:center;
+    
+}
+
+
 /* -------- START OF FOOTER -------------- */
 .footer{
     height: 150px;
