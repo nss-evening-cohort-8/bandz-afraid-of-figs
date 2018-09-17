@@ -8,8 +8,8 @@
 # Home page layout design
 ````
 The colors used for this projects are:
-[Colors:] (<img src="https://github.com/nss-evening-cohort-8/bandz-afraid-of-figs/blob/master/img/colors.jpg">)
 ````
+<img src="https://github.com/nss-evening-cohort-8/bandz-afraid-of-figs/blob/master/img/colors.jpg">
 
 ### Description
 A website for the band Afraid of Figs containing home, tour, band members, and albums pages.
