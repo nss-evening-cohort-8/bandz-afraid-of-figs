@@ -1,9 +1,9 @@
 # Afraid of Figs Band Page
 
 # Technology used:
-1. HTML5
-2. CSS3
-3. JavaScript
+_ HTML5
+_ CSS3
+_ JavaScript
 
 # Home page layout design
 ````
