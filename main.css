@@ -8,37 +8,30 @@ body{
     background-color: #fff;
     text-align: center;
 }
-
-
+#bandMembersContainer {
+background-color: #2F3542;
+}
 /* ----------- START OF HEADER ------------- */
-
-header{
+header {
     width: 100%;
     height: 130px;
     background-color: rgba(111, 30, 81, 0.8);
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: relative;
     top:0;
 }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 .logo {
     min-width: 200px;
     min-height: 50%;
     margin-left: 30px;
 }
-
-.nav_bar{
+.nav_bar {
     list-style: none;
     display: flex;
     margin-top: 100px;
 }
-
-.nav_bar a{
+.nav_bar a {
     text-decoration: none;
     padding: 100px 30px 3px 30px;
     color: #fff;
@@ -47,8 +40,7 @@ header{
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
-
-.nav_bar a:hover{
+.nav_bar a:hover {
     text-decoration: none;
     background-color: #FFC312;
     color: #fff;
@@ -57,19 +49,6 @@ header{
 }
 
 
-/* --------- END OF HEADER ------------- */
-
-
-
-.slide img{
-    max-width: 100%;
-    position: absolute; 
-    top:0;
-    z-index: -1000;
-}
-
-
-/* -------- START OF Image Container ---------- */
 
 #image_container {
     width: 100%;
@@ -89,109 +68,37 @@ header{
     max-height: 500px;
 }
 
-/* -------- END OF Image Container ---------- */
 
 
-
-/* -------- START OF FOOTER -------------- */
-
-.footer{
-    height: 150px;
-    background-color: #FFC312;
-    width:100%;
-    position: relative;
-    bottom:0;
-    left: 0;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    flex-wrap: wrap;
-}
-
-.footer img{
-    padding: 20px;
-}
-
-.footer h5{
-width:100%;
-}
-
-/* -------- END OF FOOTER -------------- */
-
-
-
-
-/* ----------- START OF HEADER ------------- */
-header{
-    width: 100%;
-    height: 130px;
-    background-color: rgba(111, 30, 81, 0.8);
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    top:0;
-}
-.logo {
-    max-width: 100%;
-    height: 100%;
-    margin-left: 30px;
-}
-.nav_bar{
-    list-style: none;
-    display: flex;
-    margin-top: 100px;
-}
-.nav_bar a {
-    text-decoration: none;
-    padding: 100px 30px 3px 30px;
-    color: #fff;
-    font-size: 1.2em;
-    border-bottom: 3px solid  #FFC312;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-}
-.nav_bar a:hover{
-    text-decoration: none;
-    background-color: #FFC312;
-    color: #fff;
-    font-size: 1.2em;
-    color: #000;
-}
 /* --------- END OF HEADER ------------- */
-.slide img{
-    max-width: 100%;
-    position: relative; 
-    top:0;
-    z-index: -1000;
+/* Begin Band Member Page */
+#memberTitle {
+    text-align: center;
+    color: #f1f2f6;
+    padding: 30px;
 }
 
-/* -------- START OF FOOTER -------------- */
-.footer{
-    height: 150px;
-    background-color: #FFC312;
-    width:100%;
-    position: relative;
-    bottom:0;
-    left: 0;
-    text-align: center;
-    color: #fff;
+#memberWrapper {
     display: flex;
-    justify-content: center;
-    justify-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 30px 60px 30px;
 }
-.footer img{
+
+.memberCard {
+    background-color: #f1f2f6;
+}
+.imageMemberCard {
+    height: 280px;
+    width: 320px;
+}
+#memberInfo1,
+#memberInfo2,
+#memberInfo3 {
     padding: 20px;
 }
-.footer h5{
-width:100%;
-}
-/* -------- END OF FOOTER -------------- */ 
-
-
-
+/* end of band member page */
 /* -------- ALBUM PAGE INFO ------------ */
 
 
@@ -232,9 +139,47 @@ width:100%;
 }
 
 #tour {
-    border: 1px solid black;
+    border: 5px ridge black;
     width: 100%;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: wrap;
     text-align: center;
- }  
+
+    
+} 
+
+#tourBody {
+    background-color: #2F3542;
+    color:  #f1f2f6;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.concert {
+    display:flex;
+    justify-content:center;
+    
+}
+
+
+/* -------- START OF FOOTER -------------- */
+.footer{
+    height: 150px;
+    background-color: #FFC312;
+    width:100%;
+    position: relative;
+    bottom:0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+.footer img{
+    padding: 20px;
+}
+.footer h5{
+width:100%;
+}
+/* -------- END OF FOOTER -------------- */ 
