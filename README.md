@@ -1,15 +1,16 @@
 # Afraid of Figs Band Page
 
 # Technology used:
-_ HTML5
-_ CSS3
-_ JavaScript
+1 HTML5
+2 CSS3
+3 JavaScript
 
 # Home page layout design
 ````
 The colors used for this projects are:
 ````
 <img src="https://github.com/nss-evening-cohort-8/bandz-afraid-of-figs/blob/master/img/colors.jpg">
+
 
 ### Description
 A website for the band Afraid of Figs containing home, tour, band members, and albums pages.
