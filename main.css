@@ -149,7 +149,17 @@ max-width: 100%;
     text-align: center;
 
     
-} 
+}
+
+#tour a {
+    color:skyblue;
+    text-decoration: none;
+    transition: 0.3s
+}
+
+#tour a:hover{
+    text-decoration: underline;
+}
 
 #tourBody {
     background-color: #2F3542;
@@ -181,7 +191,13 @@ max-width: 100%;
 }
 .footer img{
     padding: 20px;
+    transition: 0.3s;;
 }
+
+.footer img:hover{
+    transform: translateY(-8px);
+}
+
 .footer h5{
 width:100%;
 }
